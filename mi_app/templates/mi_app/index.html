@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Valero - Violinista</title>
+
+    <link rel="stylesheet" href="static/css/index.css"> <!-- Archivo de estilos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <p>Bienvenido a mi página. Aquí podrás conocer más sobre mi música y proyectos.</p>
+    </main>
+    
+        <!-- Contenido principal -->
+        <div class="content">
+            <div id="map"></div>
+        </div>
+    
+        <footer class="footer-fixed">
+            <a href="https://wa.me/56923762125" target="_blank">WhatsApp</a> | 
+            <a href="https://www.instagram.com/valeroviolinista" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/AndresValeroViolinista" target="_blank">Facebook</a>
+            <p>© 2025 Andrés Valero</p>
+        </footer>
+<!-- Script para inicializar el mapa -->
+<script>
+    function initMap() {
+        var ubicacion = { lat: -33.0245, lng: -71.5518 }; // Ejemplo: Viña del Mar
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: ubicacion
+        });
+
+        var marker = new google.maps.Marker({
+            position: ubicacion,
+            map: map,
+            title: "Aquí estoy"
+        });
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE3SmbCSKWKj1lD0SCL3cN51POe1bZrh8&callback=initMap" async defer></script>
+</body>
+</html>
